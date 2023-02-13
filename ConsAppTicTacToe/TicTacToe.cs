@@ -109,7 +109,7 @@ namespace ConsAppTicTacToe
 
         private bool PlaceSign(CellState sign, int row, int column, bool check = true)
         {
-            if (row >= boardSize || column >= boardSize)
+            if (row >= boardSize || column >= boardSize || row < 0 || column < 0)
                 return false;
             if (check)
                 if (board[row, column] != CellState.Empty && sign != CellState.Empty)
